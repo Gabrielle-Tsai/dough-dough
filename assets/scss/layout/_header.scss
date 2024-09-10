@@ -1,4 +1,28 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.navbar.fixed-bottom {
+  box-shadow: 0 -4px 12px 0 rgba(100, 100, 111, 0.12);
+}
+
+.bottom-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #64748B;
+
+  img {
+    height: 32px;
+    width: 32px;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.014em;
+  }
+}
+
+.bottom-tab.active {
+  span {
+    color: #23272E;
+  }
 }

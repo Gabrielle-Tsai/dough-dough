@@ -136,15 +136,15 @@ $orange-700: shade-color($orange, 40%) !default;
 $orange-800: shade-color($orange, 60%) !default;
 $orange-900: shade-color($orange, 80%) !default;
 
-$yellow-100: tint-color($yellow, 80%) !default;
-$yellow-200: tint-color($yellow, 60%) !default;
-$yellow-300: tint-color($yellow, 40%) !default;
-$yellow-400: tint-color($yellow, 20%) !default;
-$yellow-500: $yellow !default;
-$yellow-600: shade-color($yellow, 20%) !default;
-$yellow-700: shade-color($yellow, 40%) !default;
-$yellow-800: shade-color($yellow, 60%) !default;
-$yellow-900: shade-color($yellow, 80%) !default;
+$yellow-100: #FFF6C5; //tint-color($yellow, 80%) !default;
+$yellow-200: #FFED85; //tint-color($yellow, 60%) !default;
+$yellow-300: #FFDD46; //tint-color($yellow, 40%) !default;
+$yellow-400: #FFCA1B; //tint-color($yellow, 20%) !default;
+$yellow-500: #FFA800; //$yellow !default;
+$yellow-600: #E27F00; //shade-color($yellow, 20%) !default;
+$yellow-700: #BB5802; //shade-color($yellow, 40%) !default;
+$yellow-800: #984308; //shade-color($yellow, 60%) !default;
+$yellow-900: #7C370B; //shade-color($yellow, 80%) !default;
 
 $green-100: tint-color($green, 80%) !default;
 $green-200: tint-color($green, 60%) !default;
@@ -295,10 +295,36 @@ $cyans: (
   "cyan-800": $cyan-800,
   "cyan-900": $cyan-900
 ) !default;
+
+$accent-100: #c7fff7;
+$accent-200: #90ffef;
+$accent-300: #51f7e5;
+$accent-400: #1de4d5;
+$accent-500: #04c8bc;
+$accent-600: #009f99;
+$accent-700: #05807c;
+$accent-800: #0a6564;
+$accent-900: #0d5453;
+$accent-950: #003133;
+
+
+$accents: (
+  "accent-100": $accent-100,
+  "accent-200": $accent-200,
+  "accent-300": $accent-300,
+  "accent-400": $accent-400,
+  "accent-500": $accent-500,
+  "accent-600": $accent-600,
+  "accent-700": $accent-700,
+  "accent-800": $accent-800,
+  "accent-900": $accent-900,
+  "accent-950": $accent-950
+) !default;
+
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $yellow-500 !default; //$blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -310,14 +336,17 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
+  "primary":    $yellow-100,
+  'primary-500':$yellow-500,
+  'primary-800':$yellow-800,
   "secondary":  $secondary,
-  "success":    $success,
+  "success":    #71BE43,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       rgba(35, 39, 46, 1),
+  "accent":     $accent-600,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -410,11 +439,21 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
+  'tiny': 2px,
   1: $spacer * .25,
   2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  15: $spacer * 3.75,
+  20: $spacer * 5
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -544,12 +583,12 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+$border-radius:               .5rem; //.375rem !default;
 $border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
+$border-radius-lg:            .75rem; //.5rem !default;
 $border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius-xxl:           1.25rem; //2rem !default;
+$border-radius-pill:          1000px; //50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
@@ -557,7 +596,7 @@ $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3
 
 // scss-docs-start box-shadow-variables
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-sm:               0 .125rem .5rem rgba($black, .2) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
@@ -603,7 +642,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -1236,7 +1275,7 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 
 // scss-docs-start dropdown-variables
 $dropdown-min-width:                10rem !default;
-$dropdown-padding-x:                0 !default;
+$dropdown-padding-x:                1rem; //0 !default;
 $dropdown-padding-y:                .5rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-font-size:                $font-size-base !default;

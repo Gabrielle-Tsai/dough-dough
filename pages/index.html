@@ -5,53 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <div class="dough-profile">
+      <%- include('./layout/top-nav'); -%>
+      <div class="d-flex justify-content-between dough-panel flex-shrink-0">
+        <ul class="list-unstyled mb-0">
+          <li class="shadow-dough-btn">
+            <a class="btn p-0" href="#">
+              <img src="../assets/images/ICON/shop.svg" alt="shop">
+              <p class="mb-0">商城</p>
+            </a>
+          </li>
+          <li class="shadow-dough-btn">
+            <a class="btn p-0" href="#">
+              <img src="../assets/images/ICON/open-book.svg" alt="illustrated book">
+              <p class="mb-0">圖鑑</p>
+            </a>
+          </li>
+          <li class="shadow-dough-btn">
+            <a class="btn p-0" href="#">
+              <img src="../assets/images/ICON/trophy.svg" alt="award">
+              <p class="mb-0">獎勵</p>
+            </a>
+          </li>
+          <li class="shadow-dough-btn mb-0 pb-0">
+            <a class="btn p-0" href="#">
+              <img src="../assets/images/ICON/mission.svg" alt="mission">
+              <p class="mb-0">任務</p>
+            </a>
+          </li>
+        </ul>
 
-    <h1 class="index-title">我是首頁</h1>
+        <div class="d-flex flex-column align-items-center">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
+            <img src="../assets/images/ICON/points.svg" alt="points" class="me-tiny">
+            <span class="text-primary-800 fw-semibold lh-1">120</span>
+          </button>
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
+          <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100">
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm" type="button">
+            <span class="text-primary-800 fw-semibold lh-1">兜小美</span>
+            <img src="../assets/images/ICON/edit.svg" alt="edit">
+          </button>
+        </div>
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+        <div class="d-flex flex-column align-items-center flex-shrink-0">
+          <div class="next-level">LV 12</div>
+          <div class="exp-bar rounded-pill"></div>
+          <div class="now-level">LV 11</div>
         </div>
       </div>
+
+    </div>
+    
+    <!-- 總結 -->
+    <ul id="summary" class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月收入</div>
+        <div class="summary-money">$50,000</div>
+      </li>
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月支出</div>
+        <div class="summary-money">$12,800</div>
+      </li>
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月結餘</div>
+        <div class="summary-money text-success">$37,200</div>
+      </li>
+    </ul>
+
+    <div class="container">
+      <button class="btn btn-accent text-white py-3 px-6 rounded-pill" type="button">
+        <img src="../assets/images/ICON/plus.svg" alt="add" class="me-2">
+        <span>記帳</span>
+      </button>
     </div>
 
-    <%- include('./layout/footer'); -%>
-
+    <%- include('./layout/bottom-nav'); -%>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

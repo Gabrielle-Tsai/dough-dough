@@ -1,3 +1,116 @@
-.index-title {
-  font-size: 100px;
+.dough-profile {
+  background:  linear-gradient(to bottom, rgba(255,255,255, 1) 0%, rgba(255, 255, 255, 0) 100%),
+  url('/assets/images/背景圖/廚房.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.dough-panel {
+  padding: 16px 16px 46px;
+}
+
+.shadow-dough-btn {
+  padding: 4px;
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.shadow-dough-btn img {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  margin-bottom: 2px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 10%),
+  inset 0 -2px 4px 0 rgba(149, 92, 0, 0.35);
+}
+
+.shadow-dough-btn p {
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.014em;
+  text-shadow: -1px 0 1px #bb5802, 1px 0 1px #bb5802, 0 1px 1px #bb5802, 0 -1px 1px #bb5802, 0 2px 8px rgba(99, 99, 99, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+.exp-bar {
+  width: 8px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.24);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(226, 127, 0, 1) 0%, rgba(187, 88, 2, 1) 100%);
+    border-radius: 1000px;
+    width: 100%;
+    height: 144px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.next-level, .now-level {
+  padding: 2px 8.5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 1000px;
+  letter-spacing: 0.014em;
+}
+
+.next-level {
+  background: rgba(0, 0, 0, 0.24);
+  color: #fff;
+  margin-bottom: 9px;
+}
+
+.now-level {
+  background: $yellow-100;
+  color: $yellow-800;
+  margin-top: 9px;
+}
+
+.profile-btn img{
+  width: 20px;
+  height: 20px;
+}
+
+// 總結
+.summary {
+  width: 343px;
+  gap: 8px;
+  transform: translateY(-50%);
+  margin-bottom: -22px;
+}
+
+.summary-item:nth-child(1)::after,
+.summary-item:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #D5D9E2;
+  right: -4px;
+  top: 6px;
+  bottom: 6px;
+}
+
+.summary-title {
+  color: #23272E;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.014em;
+}
+
+.summary-money {
+  color: #23272E;
+  font-weight: 600;
 }
