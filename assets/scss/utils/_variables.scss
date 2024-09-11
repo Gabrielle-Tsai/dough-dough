@@ -715,6 +715,25 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
 
+.shadow-xs{
+  box-shadow: 0px 2px 12px 0px rgba(99, 99, 99, 0.08);
+}
+.shadow-s{
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+.shadow-m{
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 100, 0.2);
+}
+.shadow-dough-button{
+  box-shadow: 
+    0px 4px 8px 0px  rgba(0, 0, 0, 0.1),  /* 外部陰影 */
+    inset 0px -2px 4px rgba(149, 92, 0, 0.35); /* 內部陰影 */
+}
+.shadow-sheet{
+  box-shadow: 0px -8px 29px 0px rgba(100, 100, 100, 0.2);
+}
+
+
 $component-active-color:      $white !default;
 $component-active-bg:         $primary !default;
 
@@ -783,12 +802,14 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+
+//Heading Font Size
+$h1-font-size:                $font-size-base * 2.5 !default;    //40px
+$h2-font-size:                $font-size-base * 2.25 !default;   //36px
+$h3-font-size:                $font-size-base * 2 !default;      //32px
+$h4-font-size:                $font-size-base * 1.75 !default;   //28px
+$h5-font-size:                $font-size-base * 1.5 !default;    //24px
+$h6-font-size:                $font-size-base * 1.25 !default;   //20px
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -799,8 +820,10 @@ $font-sizes: (
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
-  7: 14px,
-  8: 12px
+  7: $font-size-base * 1.125,
+  8: $font-size-base,
+  9: $font-size-base * 0.875,
+  10: $font-size-base * 0.75
 ) !default;
 // scss-docs-end font-sizes
 
@@ -808,10 +831,45 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+// $headings-font-weight:        500 !default;
+$headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
+
+// 定義自定義的 line-height 變數
+$line-height-h1: 52px;
+$line-height-h2: 44px;
+$line-height-h3: 40px;
+$line-height-h4: 36px;
+$line-height-h5: 32px;
+$line-height-h6: 28px;
+
+// 應用變數
+h1 {
+  line-height: $line-height-h1;
+}
+
+h2 {
+  line-height: $line-height-h2;
+}
+
+h3 {
+  line-height: $line-height-h3;
+}
+
+h4 {
+  line-height: $line-height-h4;
+}
+
+h5 {
+  line-height: $line-height-h5;
+}
+
+h6 {
+  line-height: $line-height-h6;
+}
+
 
 // scss-docs-start display-headings
 $display-font-sizes: (
