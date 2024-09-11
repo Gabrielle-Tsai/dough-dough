@@ -8,6 +8,7 @@
   align-items: center;
   text-decoration: none;
   color: #64748B;
+  mix-blend-mode: luminosity;
 
   img {
     height: 32px;
@@ -22,6 +23,7 @@
 }
 
 .bottom-tab.active {
+  mix-blend-mode: unset;
   span {
     color: #23272E;
   }

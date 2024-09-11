@@ -97,11 +97,15 @@
 }
 
 // 總結
+.spend-list-container {
+  margin-top: -30px;
+}
+
 .summary {
   width: 343px;
   gap: 8px;
-  transform: translateY(-50%);
-  margin-bottom: -22px;
+  position: sticky;
+  top: 0;
 }
 
 .summary-item:nth-child(1)::after,
@@ -140,4 +144,22 @@
   line-height: 20px;
   letter-spacing: 0.014em;
   font-weight: 600;
+}
+
+// awards modal
+.award-title-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.points, .exps {
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+  vertical-align: middle;
+  
+  span:nth-child(2) {
+    font-size: 32px !important;
+    width: 58px;
+  }
 }

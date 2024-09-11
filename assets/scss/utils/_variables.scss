@@ -383,7 +383,7 @@ $neutrals: (
 
 // scss-docs-start theme-color-variables
 $primary:       $primary-500 !default; //$blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     $neutral-700 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -538,7 +538,7 @@ $spacers: (
   12: $spacer * 3,    //48px
   13: $spacer * 3.5,  //56px
   15: $spacer * 3.75, //60px
-  16: $spacer * 4,    //60px
+  16: $spacer * 4,    //64px
   20: $spacer * 5     //80px
 ) !default;
 // scss-docs-end spacer-variables-maps
@@ -798,7 +798,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: 14px,
+  8: 12px
 ) !default;
 // scss-docs-end font-sizes
 
@@ -836,7 +838,7 @@ $small-font-size:             .875em !default;
 $sub-sup-font-size:           .75em !default;
 
 // fusv-disable
-$text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
+$text-muted:                  #64748B; //var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
 // fusv-enable
 
 $initialism-font-size:        $small-font-size !default;
