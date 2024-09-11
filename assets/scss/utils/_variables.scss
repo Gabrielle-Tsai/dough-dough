@@ -7,6 +7,7 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
+$gray-50:  #F6F7F9 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -415,6 +416,7 @@ $theme-colors: (
   "light":      $light, 
   "dark":       rgba(35, 39, 46, 1),
   "accent":     $accent-600,
+  'neutral-50': $gray-50,
 ) !default;
 // scss-docs-end theme-colors-map
 $theme-colors: map-merge(

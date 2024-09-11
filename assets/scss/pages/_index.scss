@@ -1,9 +1,21 @@
 .dough-profile {
+  position: relative;
+}
+
+.dough-profile::after {
+  content: '';
+  position: absolute;
+  opacity: 0.64;
   background:  linear-gradient(to bottom, rgba(255,255,255, 1) 0%, rgba(255, 255, 255, 0) 100%),
   url('/assets/images/背景圖/廚房.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .dough-panel {
@@ -112,5 +124,20 @@
 
 .summary-money {
   color: #23272E;
+  font-weight: 600;
+}
+
+// 記帳區
+.track-btn {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spend-item .badge {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.014em;
   font-weight: 600;
 }
