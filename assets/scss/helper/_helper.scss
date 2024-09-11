@@ -1,0 +1,13 @@
+// Source mixin
+@mixin sm-container($padding-x: $container-padding-x) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+// Usage
+.sm-container {
+    @include sm-container(25.5px);
+}
