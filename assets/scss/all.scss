@@ -2,8 +2,11 @@
 @import './utils/variables';
 @import './utils/base';
 @import "../../node_modules/bootstrap";
+@import "./components/spend-item";
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
