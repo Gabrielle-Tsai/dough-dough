@@ -152,7 +152,7 @@
   height: 24px;
 }
 
-.points, .exps {
+.points, .exps, .lvs {
   display: flex;
   align-items: center;
   line-height: 40px;
@@ -160,6 +160,11 @@
   
   span:nth-child(2) {
     font-size: 32px !important;
+  }
+}
+
+.points, .exps {
+  span:nth-child(2) {
     width: 58px;
   }
 }
