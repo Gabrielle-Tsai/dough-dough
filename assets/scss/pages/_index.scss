@@ -152,7 +152,7 @@
   height: 24px;
 }
 
-.points, .exps {
+.points, .exps, .lvs {
   display: flex;
   align-items: center;
   line-height: 40px;
@@ -160,6 +160,114 @@
   
   span:nth-child(2) {
     font-size: 32px !important;
+  }
+}
+
+.points, .exps {
+  span:nth-child(2) {
     width: 58px;
   }
+}
+
+// evolution modal
+.evolution-modal .modal-body {
+  box-shadow: 0 0 17px 7px #FFECB3;
+  z-index: -2;
+}
+
+.evolution-close {
+  position: absolute;
+  top: 23px;
+  right: 16px;
+  z-index: 5;
+}
+
+.medal {
+  border-radius: 50%;
+  background: conic-gradient(from 180deg at 50% 50%, #FFFFFF 0deg, #FFED85 81.79deg, #FFFFFF 360deg);
+  position: relative;
+  margin-right: 78px;
+  margin-left: 78px;
+  bottom: -15px;
+}
+
+.beam-wrapper {
+  position: absolute;
+  top: 15px;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  animation: rotate 5s linear infinite;
+  z-index: -3;
+}
+
+.beam {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  clip-path: polygon(50% 50%, 100% 25%, 100% 75%);
+  transform-origin: 50% 50%;
+  transform: rotate(calc(360deg / 14 * (var(--i) - 0.5)));
+}
+
+.beam:nth-child(odd) {
+  background: transparent;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* 從 0 度開始 */
+  }
+  to {
+    transform: rotate(360deg); /* 完成 360 度的旋轉 */
+  }
+}
+
+.medal::after {
+  content: '';
+  position: absolute;
+  background: conic-gradient(from 180deg at 50% 50%, #FFCA1B -30.6deg, #FFFFFF 133.2deg, #FFCA1B 329.4deg, #FFFFFF 493.2deg);
+  top: -17px;
+  bottom: -17px;
+  left: -17px;
+  right: -17px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16.8px 7px rgba(255, 203, 46, 0.37);
+}
+
+.medal img {
+  transform: scale(1.2);
+}
+
+.evolution-modal .text-evolution {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.014em;
+}
+
+.evolution-modal .text-dough-title {
+  font-size: 40px !important;
+  line-height: 52px;
+  letter-spacing: 0.014em;
+}
+
+.deco-line {
+  position: absolute;
+  left: calc(1.5 * (-11px) * sqrt(1/2));
+  top: calc(98px + 11px * (sqrt(2) - 1));
+}
+
+.deco-line div {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  transform: rotate(45deg);
+  margin-right: calc(11px * (sqrt(1/2)));
+}
+
+.deco-line-right {
+  left: unset;
+  right: calc(2.5 * (-11px) * sqrt(1/2));;
 }

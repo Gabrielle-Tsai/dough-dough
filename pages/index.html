@@ -49,7 +49,9 @@
             <span class="text-primary-800 fw-semibold lh-1">120</span>
           </button>
 
-          <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100">
+          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#evolutionModal">
+            <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100" style="transform: scale(1.2);">
+          </button>
 
           <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm"
             type="button">
@@ -59,7 +61,7 @@
         </div>
 
         <div class="d-flex flex-column align-items-center flex-shrink-0">
-          <div class="next-level">LV 12</div>
+          <div class="next-level"><a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#levelUpModal">LV 12</a></div>
           <div class="exp-bar rounded-pill"></div>
           <div class="now-level">LV 11</div>
         </div>
@@ -204,7 +206,77 @@
     </div>
   </div>
 
-
+  <!-- level up modal -->
+  <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+          <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2">
+          <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
+        </div>
+        <div class="modal-body text-center p-6">
+          <div class="d-flex justify-content-center me-3 p-2">
+            <div class="lvs text-start">
+              <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
+              <span class="fs-2 text-primary-600 fw-bold">12</span>
+            </div>
+          </div>
+          <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
+          <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
+          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- evolution modal -->
+  <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mx-0">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 px-4 pb-0 pt-20">
+          <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
+            <img src="../assets/images/ICON/xmark-white.svg" alt="">
+          </button>
+          <div class="position-relative">
+            <div class="beam-wrapper">
+              <div class="beam" style="--i: 0;"></div>
+              <div class="beam" style="--i: 1;"></div>
+              <div class="beam" style="--i: 2;"></div>
+              <div class="beam" style="--i: 3;"></div>
+              <div class="beam" style="--i: 4;"></div>
+              <div class="beam" style="--i: 5;"></div>
+              <div class="beam" style="--i: 6;"></div>
+              <div class="beam" style="--i: 7;"></div>
+              <div class="beam" style="--i: 8;"></div>
+              <div class="beam" style="--i: 9;"></div>
+              <div class="beam" style="--i: 10;"></div>
+              <div class="beam" style="--i: 11;"></div>
+              <div class="beam" style="--i: 12;"></div>
+              <div class="beam" style="--i: 13;"></div>
+            </div>
+            <div class="medal">
+              <img src="../assets/images/角色/兜兜 - 藍莓口味.svg" alt="dough dough" class="mw-100">
+            </div>
+          </div>
+        </div>
+        <div class="modal-body text-center py-12 bg-danger">
+          <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
+          <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
+          <div class="deco-line d-flex">
+            <div class="bg-primary-200"></div>
+            <div class="bg-white"></div>
+            <div class="bg-primary-200"></div>
+          </div>
+          <div class="deco-line deco-line-right d-flex">
+            <div class="bg-primary-200"></div>
+            <div class="bg-white"></div>
+            <div class="bg-primary-200"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <script type="module" src="../main.js"></script>
 </body>
 
