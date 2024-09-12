@@ -1,4 +1,5 @@
 @import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/swiper/swiper-bundle";
 @import './utils/variables';
 @import './utils/base';
 @import './helper/helper';
@@ -8,5 +9,5 @@
 @import './layout/bottom-nav.scss';
 
 @import './pages/index.scss';
-
+@import './pages/newConsumption.scss';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");

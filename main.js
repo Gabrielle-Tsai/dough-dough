@@ -1,4 +1,4 @@
 import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
-
-console.log("Hello world!");
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';  // 引入 Swiper 樣式
