@@ -1,0 +1,12 @@
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label .rounded-circle {
+    border: 2px solid #E27F00;
+}
+
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0); /* 修改背景色與透明度 */
+}
