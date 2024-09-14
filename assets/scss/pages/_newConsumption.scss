@@ -3,6 +3,14 @@ input[type="checkbox"] {
     display: none;
 }
 
+input[type="checkbox"] + label .rounded-circle {
+    border: 2px solid transparent;
+}
+
+input[type="checkbox"]:checked + label div {
+    color: $primary-800;
+}
+
 input[type="checkbox"]:checked + label .rounded-circle {
     border: 2px solid #E27F00;
 }

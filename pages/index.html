@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
@@ -88,7 +89,7 @@
       </li>
     </ul>
 
-    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button">
+    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button"  data-bs-toggle="offcanvas" data-bs-target="#consumptionOffcanvas" aria-controls="consumptionOffcanvas">
       <img src="../assets/images/ICON/plus.svg" alt="add" class="me-2">
       <span class="lh-1">記帳</span>
     </button>
@@ -277,6 +278,34 @@
     </div>
   </div>
   
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
+    <div class="offcanvas-body p-0">
+      <%- include('./layout/newConsumption'); -%>
+    </div>
+  </div>
+
+  <%- include('./layout/components/keyboard'); -%>
+  
+  <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+          <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2">
+          <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
+          <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <img src="../assets/images/ICON/xmark-white.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
+          <div class="d-grid">
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="../main.js"></script>
 </body>
 

@@ -271,3 +271,11 @@
   left: unset;
   right: calc(2.5 * (-11px) * sqrt(1/2));;
 }
+
+.note-textarea {
+  height: 100px;
+  resize: none;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.014em;
+}
