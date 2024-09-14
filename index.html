@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/dough-dough/assets/main-837a6109.js"></script>
-  <link rel="stylesheet" href="/dough-dough/assets/main-702f3006.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script type="module" crossorigin src="/dough-dough/assets/main-c351a828.js"></script>
+  <link rel="stylesheet" href="/dough-dough/assets/main-9d13e8c2.css">
 </head>
 
 <body>
   <div class="dough-profile">
-    <div class="d-flex justify-content-center py-1 sicky-top">
+    <div class="d-flex justify-content-center py-1 sticky-top">
     <div class="dropdown">
         <button class="btn bg-white dropdown-toggle rounded-pill fw-semibold py-2 px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             31 Jul 2024
@@ -61,7 +62,9 @@
             <span class="text-primary-800 fw-semibold lh-1">120</span>
           </button>
 
-          <img src="/dough-dough/assets/兜兜 - 原味-3dd7605f.svg" alt="dough dough" class="w-100">
+          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#evolutionModal">
+            <img src="/dough-dough/assets/兜兜 - 原味-3dd7605f.svg" alt="dough dough" class="w-100" style="transform: scale(1.2);">
+          </button>
 
           <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm"
             type="button">
@@ -71,7 +74,7 @@
         </div>
 
         <div class="d-flex flex-column align-items-center flex-shrink-0">
-          <div class="next-level">LV 12</div>
+          <div class="next-level"><a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#levelUpModal">LV 12</a></div>
           <div class="exp-bar rounded-pill"></div>
           <div class="now-level">LV 11</div>
         </div>
@@ -79,25 +82,26 @@
 
   </div>
 
-  <!-- 總結 -->
-  <ul id="summary"
-    class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
-    <li class="summary-item flex-grow-1 text-center position-relative">
-      <div class='summary-title'>本月收入</div>
-      <div class="summary-money">$50,000</div>
-    </li>
-    <li class="summary-item flex-grow-1 text-center position-relative">
-      <div class='summary-title'>本月支出</div>
-      <div class="summary-money">$12,800</div>
-    </li>
-    <li class="summary-item flex-grow-1 text-center position-relative">
-      <div class='summary-title'>本月結餘</div>
-      <div class="summary-money text-success">$37,200</div>
-    </li>
-  </ul>
+  
+  <div class="container spend-list-container">
+    <!-- 總結 -->
+    <ul id="summary"
+      class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月收入</div>
+        <div class="summary-money">$50,000</div>
+      </li>
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月支出</div>
+        <div class="summary-money">$12,800</div>
+      </li>
+      <li class="summary-item flex-grow-1 text-center position-relative">
+        <div class='summary-title'>本月結餘</div>
+        <div class="summary-money text-success">$37,200</div>
+      </li>
+    </ul>
 
-  <div class="container">
-    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button">
+    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button"  data-bs-toggle="offcanvas" data-bs-target="#consumptionOffcanvas" aria-controls="consumptionOffcanvas">
       <img src="/dough-dough/assets/plus-51f2cf23.svg" alt="add" class="me-2">
       <span class="lh-1">記帳</span>
     </button>
@@ -194,20 +198,498 @@
                 <span>首頁</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/pie-chart-grey-56386924.svg" alt="">
+                <img src="/dough-dough/assets/pie-chart-active-708ca515.svg" alt="">
                 <span>分析</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/bank-building-grey-398cbf3c.svg" alt="">
+                <img src="/dough-dough/assets/bank-building-active-6ba33370.svg" alt="">
                 <span>帳戶</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/person-grey-578f2ad3.svg" alt="">
+                <img src="/dough-dough/assets/person-active-cb3ae433.svg" alt="">
                 <span>個人</span>
             </a></li>
         </ul>
     </div>
-</nav>    
+</nav>
+  <!-- Award Modal -->
+  <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
+          <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
+        </div>
+        <div class="modal-body text-center p-6">
+          <div class="d-flex justify-content-center me-3 p-2">
+            <div class="points me-3 text-start">
+              <img src="/dough-dough/assets/points-c57e5521.svg" alt="points" class="me-2 pt-1">
+              <span class="fs-2 text-primary-600 fw-bold">10</span>
+            </div>
+            <div class="exps text-start">
+              <span class="fs-4 text-primary-500 fw-bold me-2">Ex</span>
+              <span class="fs-2 text-primary-600 fw-bold">200</span>
+            </div>
+          </div>
+          <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
+          <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
+          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- level up modal -->
+  <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
+          <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
+        </div>
+        <div class="modal-body text-center p-6">
+          <div class="d-flex justify-content-center me-3 p-2">
+            <div class="lvs text-start">
+              <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
+              <span class="fs-2 text-primary-600 fw-bold">12</span>
+            </div>
+          </div>
+          <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
+          <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
+          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- evolution modal -->
+  <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mx-0">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 px-4 pb-0 pt-20">
+          <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
+            <img src="/dough-dough/assets/xmark-white-cb6c6bfa.svg" alt="">
+          </button>
+          <div class="position-relative">
+            <div class="beam-wrapper">
+              <div class="beam" style="--i: 0;"></div>
+              <div class="beam" style="--i: 1;"></div>
+              <div class="beam" style="--i: 2;"></div>
+              <div class="beam" style="--i: 3;"></div>
+              <div class="beam" style="--i: 4;"></div>
+              <div class="beam" style="--i: 5;"></div>
+              <div class="beam" style="--i: 6;"></div>
+              <div class="beam" style="--i: 7;"></div>
+              <div class="beam" style="--i: 8;"></div>
+              <div class="beam" style="--i: 9;"></div>
+              <div class="beam" style="--i: 10;"></div>
+              <div class="beam" style="--i: 11;"></div>
+              <div class="beam" style="--i: 12;"></div>
+              <div class="beam" style="--i: 13;"></div>
+            </div>
+            <div class="medal">
+              <img src="/dough-dough/assets/兜兜 - 藍莓口味-e39d949f.svg" alt="dough dough" class="mw-100">
+            </div>
+          </div>
+        </div>
+        <div class="modal-body text-center py-12 bg-danger">
+          <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
+          <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
+          <div class="deco-line d-flex">
+            <div class="bg-primary-200"></div>
+            <div class="bg-white"></div>
+            <div class="bg-primary-200"></div>
+          </div>
+          <div class="deco-line deco-line-right d-flex">
+            <div class="bg-primary-200"></div>
+            <div class="bg-white"></div>
+            <div class="bg-primary-200"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
+    <div class="offcanvas-body p-0">
+      <div class="sm-container">
+  <!-- 上方標籤按鈕 -->
+  <div class="d-flex justify-content-between align-item-center mt-5">
+    <div class="arrow-back d-flex align-items-center">
+      <button class="btn" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="material-symbols-outlined text-neutral-700"> arrow_back_ios </span>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center align-item-center bg-white rounded-pill p-1">
+      <a class="py-2 px-4 text-neutral-700 fw-semibold">收入</a>
+      <a class="bg-primary-600 py-2 px-4 rounded-pill text-white">支出</a>
+      <a class="py-2 px-4 text-neutral-700 fw-semibold">轉帳</a>
+    </div>
+    <a class="align-self-center text-neutral-700 fw-semibold">模板</a>
+  </div>
+</div>
+<!-- 選單 -->
+<div class="sm-container">
+  <div class="d-flex flex-column gap-1 mt-2">
+    <div class="fs-9 fw-semibold">最近使用</div>
+    <div class="row gx-5 gy-5">
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-recent-apartment" name="checkbox-apartment" value="apartment" />
+        <label
+          for="checkbox-recent-apartment"
+          class="d-flex flex-column justify-content-center align-item-center"
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/apartment-6c399360.svg" alt="住宿" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">住宿</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-recent-car" name="checkbox-car" value="car" />
+        <label
+          for="checkbox-recent-car"
+          class="d-flex flex-column justify-content-center align-item-center"
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/car-8428073b.svg" alt="交通" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">交通</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-recent-cheers" name="checkbox-cheers" value="cheers" />
+        <label
+          for="checkbox-recent-cheers"
+          class="d-flex flex-column justify-content-center align-item-center"
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/cheers-f0383c08.svg" alt="社交" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">社交</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-recent-mic" name="checkbox-mic" value="mic" />
+        <label
+          for="checkbox-recent-mic"
+          class="d-flex flex-column justify-content-center align-item-center"
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/mic-67da45ef.svg" alt="娛樂" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">娛樂</div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column gap-1 mt-2">
+    <div class="fs-9 my-2 fw-semibold">所有類別</div>
+    <div class="row gx-5 gy-5">
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-plus-grey" name="checkbox-plus-grey" value="plus-grey" />
+        <label
+          for="checkbox-plus-grey"
+          class="d-flex flex-column justify-content-center align-item-center"
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/plus-grey-450a9b3e.svg" alt="新增" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">新增</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-food" name="checkbox-food" value="food" />
+        <label for="checkbox-food" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/food-89374653.svg" alt="飲食" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">飲食</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-book" name="checkbox-book" value="book" />
+        <label for="checkbox-book" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/book-5501fd79.svg" alt="教育" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">教育</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-gift" name="checkbox-gift" value="gift" />
+        <label for="checkbox-gift" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/gift-4a1e9705.svg" alt="禮物" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">禮物</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-shop" name="checkbox-shop" value="shop" />
+        <label for="checkbox-shop" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="購物" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">購物</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-clothes" name="checkbox-clothes" value="clothes" />
+        <label for="checkbox-clothes" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/clothes-a44eb13b.svg" alt="衣物" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">衣物</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-makeup" name="checkbox-makeup" value="makeup" />
+        <label for="checkbox-makeup" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/makeup-804856f1.svg" alt="美容" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">美容</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-pet" name="checkbox-pet" value="pet" />
+        <label for="checkbox-pet" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/pet-09bf28ec.svg" alt="寵物" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">寵物</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-baby" name="checkbox-baby" value="baby" />
+        <label for="checkbox-baby" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/baby-313e5394.svg" alt="嬰幼" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">嬰幼</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-desktop" name="checkbox-desktop" value="desktop" />
+        <label for="checkbox-desktop" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/desktop-cd4faf21.svg" alt="電子" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">電子</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-hospital" name="checkbox-hospital" value="hospital" />
+        <label for="checkbox-hospital" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/hospital-c81ac77e.svg" alt="醫療" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">醫療</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-stock" name="checkbox-stock" value="stock" />
+        <label for="checkbox-stock" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/stock-a97c28fb.svg" alt="股票" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">股票</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-apartment" name="checkbox-apartment" value="apartment" />
+        <label
+          for="checkbox-apartment"
+          class="d-flex flex-column justify-content-center align-item-center"
+         
+          data-bs-target="#offcanvasNumPad"
+          aria-controls="offcanvasBottom"
+        >
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/apartment-6c399360.svg" alt="住宿" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">住宿</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-car" name="checkbox-car" value="car" />
+        <label for="checkbox-car" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/car-8428073b.svg" alt="交通" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">交通</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-cheers" name="checkbox-cheers" value="cheers" />
+        <label for="checkbox-cheers" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/cheers-f0383c08.svg" alt="社交" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">社交</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-mic" name="checkbox-mic" value="mic" />
+        <label for="checkbox-mic" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/mic-67da45ef.svg" alt="娛樂" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">娛樂</div>
+        </label>
+      </div>
+
+      <div class="col-3">
+        <input type="checkbox" id="checkbox-ball" name="checkbox-ball" value="ball" />
+        <label for="checkbox-ball" class="d-flex flex-column justify-content-center align-item-center" data-bs-target="#offcanvasNumPad" aria-controls="offcanvasBottom">
+          <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
+            <img src="/dough-dough/assets/ball-485e206d.svg" alt="運動" width="32px" height="32px" />
+          </div>
+          <div class="mt-1 mx-auto">運動</div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasNumPad" aria-labelledby="offcanvasBottomLabel">
+  <div class="rounded-top">
+    <!-- 切換日期 -->
+    <div class="d-flex justify-content-between align-item-center py-3 px-4">
+      <div class="d-flex align-items-center">
+        <span class="material-symbols-outlined text-neutral-700"> arrow_back_ios </span>
+      </div>
+      <div class="fs-7 fw-semibold">31 Jul 2024</div>
+      <div class="d-flex align-items-center">
+        <span class="material-symbols-outlined text-neutral-700"> arrow_forward_ios </span>
+      </div>
+    </div>
+
+    <!-- 輸入金額、照片、填寫備註 -->
+    <div class="d-flex align-item-center py-3 px-4 bg-neutral-100">
+      <div style="width: 40%">
+        <span class="fs-6 text-danger fw-bold">$0</span>
+      </div>
+      <div class="bg-neutral-300" style="width: 1px"></div>
+      <div class="d-flex gap-2 ms-2 justify-content-between align-item-center flex-grow-1">
+        <span class="material-symbols-outlined fs-2"> photo_camera </span>
+        <button class="w-100 border-0 bg-transparent text-start text-neutral-300 fs-10" type="button" data-bs-toggle="modal" data-bs-target="#consumptionNodeModal">填寫備註</button>
+      </div>
+    </div>
+
+    <!-- 快速標記 -->
+    <div class="py-3 bg-neutral-100">
+      <div class="swiper mySwiper">
+        <ul class="swiper-wrapper list-unstyled m-0 p-0 d-flex align-items-center">
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny ms-4 px-2 text-nowrap">老爺溫泉酒店</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">宜蘭礁溪飯店</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">溫泉湯屋</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">青旅</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">盥洗用具</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto", // 讓每個 slide 根據內容自適應
+        spaceBetween: 8, // slide 間距
+        mousewheel: true, // 支援滑鼠滾動
+      });
+    </script>
+
+    <!-- 鍵盤區 -->
+    <div class="p-3 bg-neutral-200">
+      <div class="row px-3 mb-2">
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">7</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">8</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">9</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">÷</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs" style="height: 40px; line-height: 40px">
+          <span class="material-symbols-outlined text-neutral-500" style="line-height: 40px"> account_balance </span>
+        </button>
+      </div>
+      <div class="row px-3 mb-2">
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">4</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">5</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">6</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">x</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs" style="height: 40px; line-height: 40px">
+          <span class="material-symbols-outlined text-neutral-500" style="line-height: 40px"> qr_code_scanner </span>
+        </button>
+      </div>
+      <div class="row px-3 mb-2">
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">1</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">2</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">3</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">-</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 text-neutral-500 fs-7 fw-semibold bg-white rounded-xxs" style="height: 40px; line-height: 40px">再記</button>
+      </div>
+      <div class="row px-3">
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">.</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">0</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">
+          <span class="material-symbols-outlined" style="line-height: 40px"> backspace </span>
+        </button>
+        <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">+</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 text-white bg-accent-600 rounded-xxs" data-bs-dismiss="offcanvas" aria-label="Close" style="height: 40px; line-height: 40px" id="numPadOk">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
+          <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
+          <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <img src="/dough-dough/assets/xmark-white-cb6c6bfa.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body text-center p-3">
+          <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
+          <div class="d-grid">
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 </body>
 
 </html>
