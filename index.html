@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script type="module" crossorigin src="/dough-dough/assets/main-c351a828.js"></script>
+    <link rel="stylesheet" href="/dough-dough/assets/main-9d13e8c2.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <script type="module" crossorigin src="/dough-dough/assets/main-c351a828.js"></script>
-  <link rel="stylesheet" href="/dough-dough/assets/main-9d13e8c2.css">
-</head>
-
-<body>
-  <div class="dough-profile">
-    <div class="d-flex justify-content-center py-1 sticky-top">
+  <body>
+    <div class="dough-profile">
+      <div class="d-flex justify-content-center py-1 sticky-top">
     <div class="dropdown">
         <button class="btn bg-white dropdown-toggle rounded-pill fw-semibold py-2 px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             31 Jul 2024
@@ -31,45 +30,43 @@
         <ul class="list-unstyled mb-0">
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="shop">
+              <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="shop" />
               <p class="mb-0">商城</p>
             </a>
           </li>
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="/dough-dough/assets/open-book-417b3c79.svg" alt="illustrated book">
+              <img src="/dough-dough/assets/open-book-417b3c79.svg" alt="illustrated book" />
               <p class="mb-0">圖鑑</p>
             </a>
           </li>
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="/dough-dough/assets/trophy-f277344a.svg" alt="award">
+              <img src="/dough-dough/assets/trophy-f277344a.svg" alt="award" />
               <p class="mb-0">獎勵</p>
             </a>
           </li>
           <li class="shadow-dough-btn mb-0 pb-0">
             <a class="btn p-0" href="#">
-              <img src="/dough-dough/assets/mission-e456c374.svg" alt="mission">
+              <img src="/dough-dough/assets/mission-e456c374.svg" alt="mission" />
               <p class="mb-0">任務</p>
             </a>
           </li>
         </ul>
 
         <div class="d-flex flex-column align-items-center">
-          <button
-            class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
-            <img src="/dough-dough/assets/points-c57e5521.svg" alt="points" class="me-tiny">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
+            <img src="/dough-dough/assets/points-c57e5521.svg" alt="points" class="me-tiny" />
             <span class="text-primary-800 fw-semibold lh-1">120</span>
           </button>
 
           <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#evolutionModal">
-            <img src="/dough-dough/assets/兜兜 - 原味-3dd7605f.svg" alt="dough dough" class="w-100" style="transform: scale(1.2);">
+            <img src="/dough-dough/assets/兜兜 - 原味-3dd7605f.svg" alt="dough dough" class="w-100" style="transform: scale(1.2)" />
           </button>
 
-          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm"
-            type="button">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm" type="button">
             <span class="text-primary-800 fw-semibold lh-1">兜小美</span>
-            <img src="/dough-dough/assets/edit-41da9f83.svg" alt="edit">
+            <img src="/dough-dough/assets/edit-41da9f83.svg" alt="edit" />
           </button>
         </div>
 
@@ -79,240 +76,242 @@
           <div class="now-level">LV 11</div>
         </div>
       </div>
+    </div>
 
-  </div>
+    <div class="container spend-list-container">
+      <!-- 總結 -->
+      <ul id="summary" class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月收入</div>
+          <div class="summary-money">$50,000</div>
+        </li>
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月支出</div>
+          <div class="summary-money">$12,800</div>
+        </li>
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月結餘</div>
+          <div class="summary-money text-success">$37,200</div>
+        </li>
+      </ul>
 
-  
-  <div class="container spend-list-container">
-    <!-- 總結 -->
-    <ul id="summary"
-      class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月收入</div>
-        <div class="summary-money">$50,000</div>
-      </li>
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月支出</div>
-        <div class="summary-money">$12,800</div>
-      </li>
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月結餘</div>
-        <div class="summary-money text-success">$37,200</div>
-      </li>
-    </ul>
+      <button
+        class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#consumptionOffcanvas"
+        aria-controls="consumptionOffcanvas"
+      >
+        <img src="/dough-dough/assets/plus-db891a9f.svg" alt="add" class="me-2" />
+        <span class="lh-1">記帳</span>
+      </button>
 
-    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button"  data-bs-toggle="offcanvas" data-bs-target="#consumptionOffcanvas" aria-controls="consumptionOffcanvas">
-      <img src="/dough-dough/assets/plus-51f2cf23.svg" alt="add" class="me-2">
-      <span class="lh-1">記帳</span>
-    </button>
+      <ul class="spend-list list-unstyled ps-0 pb-7 mb-10">
+        <li class="spend-item">
+          <img src="/dough-dough/assets/food-89374653.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">飲食</div>
+              <p class="spend-note">八方雲集</p>
+            </div>
+            <div class="spend-price text-danger">- $160</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/house-68ff64e9.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">住宿</div>
+              <p class="spend-note">房租</p>
+            </div>
+            <div class="spend-price text-danger">- $10,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/income-9b15dd32.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">薪資</div>
+              <p class="spend-note">努力用功公司</p>
+            </div>
+            <div class="spend-price text-success">$48,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/car-8428073b.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">交通</div>
+              <p class="spend-note">台北到基隆</p>
+            </div>
+            <div class="spend-price text-danger">- $60</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/award-e66cecc4.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">獎學金</div>
+              <p class="spend-note">UI 設計實戰營</p>
+            </div>
+            <div class="spend-price text-success">$2,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/book-5501fd79.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">教育</div>
+              <p class="spend-note">博客來</p>
+            </div>
+            <div class="spend-price text-danger">- $1,800</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">購物</div>
+              <p class="spend-note">誠品南西百貨公司</p>
+            </div>
+            <div class="spend-price text-danger">- $3,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">購物</div>
+              <p class="spend-note">雜貨店</p>
+            </div>
+            <div class="spend-price text-danger">- $100</div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
-    <ul class="spend-list list-unstyled ps-0 pb-7 mb-10">
-      <li class="spend-item">
-        <img src="/dough-dough/assets/food-89374653.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">飲食</div>
-            <p class="spend-note">八方雲集</p>
-          </div>
-          <div class="spend-price text-danger">- $160</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/house-68ff64e9.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">住宿</div>
-            <p class="spend-note">房租</p>
-          </div>
-          <div class="spend-price text-danger">- $10,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/income-9b15dd32.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">薪資</div>
-            <p class="spend-note">努力用功公司</p>
-          </div>
-          <div class="spend-price text-success">$48,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/car-8428073b.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">交通</div>
-            <p class="spend-note">台北到基隆</p>
-          </div>
-          <div class="spend-price text-danger">- $60</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/award-e66cecc4.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">獎學金</div>
-            <p class="spend-note">UI 設計實戰營</p>
-          </div>
-          <div class="spend-price text-success">$2,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/book-5501fd79.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">教育</div>
-            <p class="spend-note">博客來</p>
-          </div>
-          <div class="spend-price text-danger">- $1,800</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">購物</div>
-            <p class="spend-note">誠品南西百貨公司</p>
-          </div>
-          <div class="spend-price text-danger">- $3,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="/dough-dough/assets/shop-8dbee5c8.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">購物</div>
-            <p class="spend-note">雜貨店</p>
-          </div>
-          <div class="spend-price text-danger">- $100</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <nav class="navbar navbar-expand-lg bg-white fixed-bottom">
+    <nav class="navbar navbar-expand-lg bg-white fixed-bottom">
     <div class="container-fluid">
         <ul class="navbar-nav flex-row justify-content-around w-100">
             <li><a href="#" class="bottom-tab active">
-                <img src="/dough-dough/assets/house-68ff64e9.svg" alt="">
+                <img src="/dough-dough/assets/house-active-e5262cb2.svg" alt="">
                 <span>首頁</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/pie-chart-active-708ca515.svg" alt="">
+                <img src="/dough-dough/assets/pie-chart-active-e64b0b01.svg" alt="">
                 <span>分析</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/bank-building-active-6ba33370.svg" alt="">
+                <img src="/dough-dough/assets/bank-building-active-1e3ef410.svg" alt="">
                 <span>帳戶</span>
             </a></li>
             <li><a href="#" class="bottom-tab">
-                <img src="/dough-dough/assets/person-active-cb3ae433.svg" alt="">
+                <img src="/dough-dough/assets/person-active-34a032ad.svg" alt="">
                 <span>個人</span>
             </a></li>
         </ul>
     </div>
 </nav>
-  <!-- Award Modal -->
-  <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
-        </div>
-        <div class="modal-body text-center p-6">
-          <div class="d-flex justify-content-center me-3 p-2">
-            <div class="points me-3 text-start">
-              <img src="/dough-dough/assets/points-c57e5521.svg" alt="points" class="me-2 pt-1">
-              <span class="fs-2 text-primary-600 fw-bold">10</span>
-            </div>
-            <div class="exps text-start">
-              <span class="fs-4 text-primary-500 fw-bold me-2">Ex</span>
-              <span class="fs-2 text-primary-600 fw-bold">200</span>
-            </div>
+    <!-- Award Modal -->
+    <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="/dough-dough/assets/toast-white-152a146a.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
           </div>
-          <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
-          <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
-          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+          <div class="modal-body text-center p-6">
+            <div class="d-flex justify-content-center me-3 p-2">
+              <div class="points me-3 text-start">
+                <img src="/dough-dough/assets/points-c57e5521.svg" alt="points" class="me-2 pt-1" />
+                <span class="fs-2 text-primary-600 fw-bold">10</span>
+              </div>
+              <div class="exps text-start">
+                <span class="fs-4 text-primary-500 fw-bold me-2">Ex</span>
+                <span class="fs-2 text-primary-600 fw-bold">200</span>
+              </div>
+            </div>
+            <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
+            <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- level up modal -->
-  <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
-        </div>
-        <div class="modal-body text-center p-6">
-          <div class="d-flex justify-content-center me-3 p-2">
-            <div class="lvs text-start">
-              <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
-              <span class="fs-2 text-primary-600 fw-bold">12</span>
-            </div>
+    <!-- level up modal -->
+    <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="/dough-dough/assets/toast-white-152a146a.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
           </div>
-          <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
-          <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
-          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- evolution modal -->
-  <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered mx-0">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 px-4 pb-0 pt-20">
-          <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
-            <img src="/dough-dough/assets/xmark-white-cb6c6bfa.svg" alt="">
-          </button>
-          <div class="position-relative">
-            <div class="beam-wrapper">
-              <div class="beam" style="--i: 0;"></div>
-              <div class="beam" style="--i: 1;"></div>
-              <div class="beam" style="--i: 2;"></div>
-              <div class="beam" style="--i: 3;"></div>
-              <div class="beam" style="--i: 4;"></div>
-              <div class="beam" style="--i: 5;"></div>
-              <div class="beam" style="--i: 6;"></div>
-              <div class="beam" style="--i: 7;"></div>
-              <div class="beam" style="--i: 8;"></div>
-              <div class="beam" style="--i: 9;"></div>
-              <div class="beam" style="--i: 10;"></div>
-              <div class="beam" style="--i: 11;"></div>
-              <div class="beam" style="--i: 12;"></div>
-              <div class="beam" style="--i: 13;"></div>
+          <div class="modal-body text-center p-6">
+            <div class="d-flex justify-content-center me-3 p-2">
+              <div class="lvs text-start">
+                <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
+                <span class="fs-2 text-primary-600 fw-bold">12</span>
+              </div>
             </div>
-            <div class="medal">
-              <img src="/dough-dough/assets/兜兜 - 藍莓口味-e39d949f.svg" alt="dough dough" class="mw-100">
-            </div>
-          </div>
-        </div>
-        <div class="modal-body text-center py-12 bg-danger">
-          <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
-          <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
-          <div class="deco-line d-flex">
-            <div class="bg-primary-200"></div>
-            <div class="bg-white"></div>
-            <div class="bg-primary-200"></div>
-          </div>
-          <div class="deco-line deco-line-right d-flex">
-            <div class="bg-primary-200"></div>
-            <div class="bg-white"></div>
-            <div class="bg-primary-200"></div>
+            <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
+            <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
-    <div class="offcanvas-body p-0">
-      <div class="sm-container">
+
+    <!-- evolution modal -->
+    <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered mx-0">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0 px-4 pb-0 pt-20">
+            <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
+              <img src="/dough-dough/assets/xmark-white-5377ab54.svg" alt="" />
+            </button>
+            <div class="position-relative">
+              <div class="beam-wrapper">
+                <div class="beam" style="--i: 0"></div>
+                <div class="beam" style="--i: 1"></div>
+                <div class="beam" style="--i: 2"></div>
+                <div class="beam" style="--i: 3"></div>
+                <div class="beam" style="--i: 4"></div>
+                <div class="beam" style="--i: 5"></div>
+                <div class="beam" style="--i: 6"></div>
+                <div class="beam" style="--i: 7"></div>
+                <div class="beam" style="--i: 8"></div>
+                <div class="beam" style="--i: 9"></div>
+                <div class="beam" style="--i: 10"></div>
+                <div class="beam" style="--i: 11"></div>
+                <div class="beam" style="--i: 12"></div>
+                <div class="beam" style="--i: 13"></div>
+              </div>
+              <div class="medal">
+                <img src="/dough-dough/assets/兜兜 - 藍莓口味-e39d949f.svg" alt="dough dough" class="mw-100" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-body text-center py-12 bg-danger">
+            <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
+            <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
+            <div class="deco-line d-flex">
+              <div class="bg-primary-200"></div>
+              <div class="bg-white"></div>
+              <div class="bg-primary-200"></div>
+            </div>
+            <div class="deco-line deco-line-right d-flex">
+              <div class="bg-primary-200"></div>
+              <div class="bg-white"></div>
+              <div class="bg-primary-200"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
+      <div class="offcanvas-body p-0"><div class="sm-container">
   <!-- 上方標籤按鈕 -->
   <div class="d-flex justify-content-between align-item-center mt-5">
     <div class="arrow-back d-flex align-items-center">
@@ -406,7 +405,7 @@
           aria-controls="offcanvasBottom"
         >
           <div class="p-2 rounded-circle bg-white text-align-center m-auto shadow-xs">
-            <img src="/dough-dough/assets/plus-grey-450a9b3e.svg" alt="新增" width="32px" height="32px" />
+            <img src="/dough-dough/assets/plus-grey-e2355e85.svg" alt="新增" width="32px" height="32px" />
           </div>
           <div class="mt-1 mx-auto">新增</div>
         </label>
@@ -579,10 +578,10 @@
       </div>
     </div>
   </div>
-</div>    </div>
-  </div>
+</div></div>
+    </div>
 
-  <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasNumPad" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasNumPad" aria-labelledby="offcanvasBottomLabel">
   <div class="rounded-top">
     <!-- 切換日期 -->
     <div class="d-flex justify-content-between align-item-center py-3 px-4">
@@ -602,7 +601,9 @@
       </div>
       <div class="bg-neutral-300" style="width: 1px"></div>
       <div class="d-flex gap-2 ms-2 justify-content-between align-item-center flex-grow-1">
-        <span class="material-symbols-outlined fs-2"> photo_camera </span>
+        <button type="button" class="border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPhotoPad" aria-controls="offcanvasBottom">
+          <span class="material-symbols-outlined fs-2"> photo_camera </span>
+        </button>
         <button class="w-100 border-0 bg-transparent text-start text-neutral-300 fs-10" type="button" data-bs-toggle="modal" data-bs-target="#consumptionNodeModal">填寫備註</button>
       </div>
     </div>
@@ -663,33 +664,255 @@
           <span class="material-symbols-outlined" style="line-height: 40px"> backspace </span>
         </button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">+</button>
-        <button class="col d-flex justify-content-center align-item-center border-0 text-white bg-accent-600 rounded-xxs" data-bs-dismiss="offcanvas" aria-label="Close" style="height: 40px; line-height: 40px" id="numPadOk">OK</button>
+        <button
+          class="col d-flex justify-content-center align-item-center border-0 text-white bg-accent-600 rounded-xxs"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          style="height: 40px; line-height: 40px"
+          id="numPadOk"
+        >
+          OK
+        </button>
       </div>
     </div>
   </div>
 </div>
-  
-  <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="/dough-dough/assets/toast-white-68f72281.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
-          <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
-            <img src="/dough-dough/assets/xmark-white-cb6c6bfa.svg" alt="">
-          </button>
+ <div class="offcanvas offcanvas-bottom" style="height: 75%" tabindex="-1" id="offcanvasPhotoPad" aria-labelledby="offcanvasBottomLabel">
+  <div class="rounded-top">
+    <!-- 切換日期 -->
+    <div class="d-flex justify-content-between align-item-center py-3 px-4">
+      <div class="d-flex align-items-center">
+        <span class="material-symbols-outlined text-neutral-700"> close </span>
+      </div>
+      <div class="fs-7 fw-semibold">已選擇 0 張照片</div>
+      <div class="d-flex align-items-center">
+        <span class="material-symbols-outlined text-neutral-700"> photo_camera </span>
+      </div>
+    </div>
+
+    <div class="row gx-1 gy-1" style="max-height: 450px; overflow-y: auto">
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1720048170970-3848514c3d60?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
         </div>
-        <div class="modal-body text-center p-3">
-          <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
-          <div class="d-grid">
-            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
-          </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726503454447-6c67b92dcc52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725755532430-417b990e5358?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726251654985-b415579cd295?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1721332153370-56d7cc352d63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1724279797190-8371a9939494?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725109431834-bed0465b6302?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726402919430-a4521f2b1fa6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1724963950078-8378a0b46793?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1M3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726002575476-00708f3c6aa1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726340051943-b9bd0bdba776?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2NXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1724060569128-1f2999d2b104?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3OXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664378762933-68ff01d9f997?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4NXx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1723811481178-d383b3be4605?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5N3x8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725859685127-c723ea1d32a1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMzh8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1720535874037-a873d303ea75?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNTJ8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1710713819757-9a18ff8e906d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNjR8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1726099881065-57be239817d0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNzd8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725902255593-2f585acfce33?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxODV8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725743537422-b36edd83b46a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMTl8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1724076820794-3140772e74e5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMjZ8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1725714354934-2977a57f8fd5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMjh8fHxlbnwwfHx8fHw%3D"
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  
-</body>
+    <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="/dough-dough/assets/toast-white-152a146a.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
+            <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
+              <img src="/dough-dough/assets/xmark-white-5377ab54.svg" alt="" />
+            </button>
+          </div>
+          <div class="modal-body text-center p-3">
+            <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
+            <div class="d-grid">
+              <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    
+  </body>
 </html>
