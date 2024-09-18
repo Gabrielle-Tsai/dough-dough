@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="dough-profile">
-    <%- include('./layout/top-nav'); -%>
+  <body>
+    <div class="dough-profile">
+      <%- include('./layout/top-nav'); -%>
       <div class="d-flex justify-content-between dough-panel flex-shrink-0">
         <ul class="list-unstyled mb-0">
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="../assets/images/ICON/shop.svg" alt="shop">
+              <img src="../assets/images/ICON/shop.svg" alt="shop" />
               <p class="mb-0">商城</p>
             </a>
           </li>
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="../assets/images/ICON/open-book.svg" alt="illustrated book">
+              <img src="../assets/images/ICON/open-book.svg" alt="illustrated book" />
               <p class="mb-0">圖鑑</p>
             </a>
           </li>
           <li class="shadow-dough-btn">
             <a class="btn p-0" href="#">
-              <img src="../assets/images/ICON/trophy.svg" alt="award">
+              <img src="../assets/images/ICON/trophy.svg" alt="award" />
               <p class="mb-0">獎勵</p>
             </a>
           </li>
           <li class="shadow-dough-btn mb-0 pb-0">
             <a class="btn p-0" href="#">
-              <img src="../assets/images/ICON/mission.svg" alt="mission">
+              <img src="../assets/images/ICON/mission.svg" alt="mission" />
               <p class="mb-0">任務</p>
             </a>
           </li>
         </ul>
 
         <div class="d-flex flex-column align-items-center">
-          <button
-            class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
-            <img src="../assets/images/ICON/points.svg" alt="points" class="me-tiny">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
+            <img src="../assets/images/ICON/points.svg" alt="points" class="me-tiny" />
             <span class="text-primary-800 fw-semibold lh-1">120</span>
           </button>
 
           <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#evolutionModal">
-            <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100" style="transform: scale(1.2);">
+            <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100" style="transform: scale(1.2)" />
           </button>
 
-          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm"
-            type="button">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm" type="button">
             <span class="text-primary-800 fw-semibold lh-1">兜小美</span>
-            <img src="../assets/images/ICON/edit.svg" alt="edit">
+            <img src="../assets/images/ICON/edit.svg" alt="edit" />
           </button>
         </div>
 
@@ -67,246 +64,246 @@
           <div class="now-level">LV 11</div>
         </div>
       </div>
-
-  </div>
-
-  
-  <div class="container spend-list-container">
-    <!-- 總結 -->
-    <ul id="summary"
-      class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月收入</div>
-        <div class="summary-money">$50,000</div>
-      </li>
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月支出</div>
-        <div class="summary-money">$12,800</div>
-      </li>
-      <li class="summary-item flex-grow-1 text-center position-relative">
-        <div class='summary-title'>本月結餘</div>
-        <div class="summary-money text-success">$37,200</div>
-      </li>
-    </ul>
-
-    <button class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn" type="button"  data-bs-toggle="offcanvas" data-bs-target="#consumptionOffcanvas" aria-controls="consumptionOffcanvas">
-      <img src="../assets/images/ICON/plus.svg" alt="add" class="me-2">
-      <span class="lh-1">記帳</span>
-    </button>
-
-    <ul class="spend-list list-unstyled ps-0 pb-7 mb-10">
-      <li class="spend-item">
-        <img src="../assets/images/ICON/food.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">飲食</div>
-            <p class="spend-note">八方雲集</p>
-          </div>
-          <div class="spend-price text-danger">- $160</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/house.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">住宿</div>
-            <p class="spend-note">房租</p>
-          </div>
-          <div class="spend-price text-danger">- $10,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/income.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">薪資</div>
-            <p class="spend-note">努力用功公司</p>
-          </div>
-          <div class="spend-price text-success">$48,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/car.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">交通</div>
-            <p class="spend-note">台北到基隆</p>
-          </div>
-          <div class="spend-price text-danger">- $60</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/award.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">獎學金</div>
-            <p class="spend-note">UI 設計實戰營</p>
-          </div>
-          <div class="spend-price text-success">$2,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/book.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">教育</div>
-            <p class="spend-note">博客來</p>
-          </div>
-          <div class="spend-price text-danger">- $1,800</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/shop.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">購物</div>
-            <p class="spend-note">誠品南西百貨公司</p>
-          </div>
-          <div class="spend-price text-danger">- $3,000</div>
-        </div>
-      </li>
-      <li class="spend-item">
-        <img src="../assets/images/ICON/shop.svg" alt="hamburger" class="spend-category-icon me-3">
-        <div class="d-flex align-items-center w-100 justify-content-between">
-          <div class="spend-text">
-            <div class="spend-category-tag">購物</div>
-            <p class="spend-note">雜貨店</p>
-          </div>
-          <div class="spend-price text-danger">- $100</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <%- include('./layout/bottom-nav'); -%>
-
-  <!-- Award Modal -->
-  <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
-        </div>
-        <div class="modal-body text-center p-6">
-          <div class="d-flex justify-content-center me-3 p-2">
-            <div class="points me-3 text-start">
-              <img src="../assets/images/ICON/points.svg" alt="points" class="me-2 pt-1">
-              <span class="fs-2 text-primary-600 fw-bold">10</span>
-            </div>
-            <div class="exps text-start">
-              <span class="fs-4 text-primary-500 fw-bold me-2">Ex</span>
-              <span class="fs-2 text-primary-600 fw-bold">200</span>
-            </div>
-          </div>
-          <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
-          <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
-          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- level up modal -->
-  <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
-        </div>
-        <div class="modal-body text-center p-6">
-          <div class="d-flex justify-content-center me-3 p-2">
-            <div class="lvs text-start">
-              <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
-              <span class="fs-2 text-primary-600 fw-bold">12</span>
-            </div>
-          </div>
-          <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
-          <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
-          <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- evolution modal -->
-  <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered mx-0">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 px-4 pb-0 pt-20">
-          <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
-            <img src="../assets/images/ICON/xmark-white.svg" alt="">
-          </button>
-          <div class="position-relative">
-            <div class="beam-wrapper">
-              <div class="beam" style="--i: 0;"></div>
-              <div class="beam" style="--i: 1;"></div>
-              <div class="beam" style="--i: 2;"></div>
-              <div class="beam" style="--i: 3;"></div>
-              <div class="beam" style="--i: 4;"></div>
-              <div class="beam" style="--i: 5;"></div>
-              <div class="beam" style="--i: 6;"></div>
-              <div class="beam" style="--i: 7;"></div>
-              <div class="beam" style="--i: 8;"></div>
-              <div class="beam" style="--i: 9;"></div>
-              <div class="beam" style="--i: 10;"></div>
-              <div class="beam" style="--i: 11;"></div>
-              <div class="beam" style="--i: 12;"></div>
-              <div class="beam" style="--i: 13;"></div>
-            </div>
-            <div class="medal">
-              <img src="../assets/images/角色/兜兜 - 藍莓口味.svg" alt="dough dough" class="mw-100">
-            </div>
-          </div>
-        </div>
-        <div class="modal-body text-center py-12 bg-danger">
-          <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
-          <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
-          <div class="deco-line d-flex">
-            <div class="bg-primary-200"></div>
-            <div class="bg-white"></div>
-            <div class="bg-primary-200"></div>
-          </div>
-          <div class="deco-line deco-line-right d-flex">
-            <div class="bg-primary-200"></div>
-            <div class="bg-white"></div>
-            <div class="bg-primary-200"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
-    <div class="offcanvas-body p-0">
-      <%- include('./layout/newConsumption'); -%>
-    </div>
-  </div>
+    <div class="container spend-list-container">
+      <!-- 總結 -->
+      <ul id="summary" class="summary rounded-3 shadow-sm list-unstyled d-flex flex-row justify-content-around p-2 mx-auto bg-white">
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月收入</div>
+          <div class="summary-money">$50,000</div>
+        </li>
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月支出</div>
+          <div class="summary-money">$12,800</div>
+        </li>
+        <li class="summary-item flex-grow-1 text-center position-relative">
+          <div class="summary-title">本月結餘</div>
+          <div class="summary-money text-success">$37,200</div>
+        </li>
+      </ul>
 
-  <%- include('./layout/components/keyboard'); -%>
-  
-  <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-neutral-500 text-white py-3 px-4">
-          <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2">
-          <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
-          <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
-            <img src="../assets/images/ICON/xmark-white.svg" alt="">
-          </button>
-        </div>
-        <div class="modal-body text-center p-3">
-          <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
-          <div class="d-grid">
+      <button
+        class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#consumptionOffcanvas"
+        aria-controls="consumptionOffcanvas"
+      >
+        <img src="../assets/images/ICON/plus.svg" alt="add" class="me-2" />
+        <span class="lh-1">記帳</span>
+      </button>
+
+      <ul class="spend-list list-unstyled ps-0 pb-7 mb-10">
+        <li class="spend-item">
+          <img src="../assets/images/ICON/food.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">飲食</div>
+              <p class="spend-note">八方雲集</p>
+            </div>
+            <div class="spend-price text-danger">- $160</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/house.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">住宿</div>
+              <p class="spend-note">房租</p>
+            </div>
+            <div class="spend-price text-danger">- $10,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/income.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">薪資</div>
+              <p class="spend-note">努力用功公司</p>
+            </div>
+            <div class="spend-price text-success">$48,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/car.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">交通</div>
+              <p class="spend-note">台北到基隆</p>
+            </div>
+            <div class="spend-price text-danger">- $60</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/award.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">獎學金</div>
+              <p class="spend-note">UI 設計實戰營</p>
+            </div>
+            <div class="spend-price text-success">$2,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/book.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">教育</div>
+              <p class="spend-note">博客來</p>
+            </div>
+            <div class="spend-price text-danger">- $1,800</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/shop.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">購物</div>
+              <p class="spend-note">誠品南西百貨公司</p>
+            </div>
+            <div class="spend-price text-danger">- $3,000</div>
+          </div>
+        </li>
+        <li class="spend-item">
+          <img src="../assets/images/ICON/shop.svg" alt="hamburger" class="spend-category-icon me-3" />
+          <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="spend-text">
+              <div class="spend-category-tag">購物</div>
+              <p class="spend-note">雜貨店</p>
+            </div>
+            <div class="spend-price text-danger">- $100</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <%- include('./layout/bottom-nav'); -%>
+
+    <!-- Award Modal -->
+    <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
+          </div>
+          <div class="modal-body text-center p-6">
+            <div class="d-flex justify-content-center me-3 p-2">
+              <div class="points me-3 text-start">
+                <img src="../assets/images/ICON/points.svg" alt="points" class="me-2 pt-1" />
+                <span class="fs-2 text-primary-600 fw-bold">10</span>
+              </div>
+              <div class="exps text-start">
+                <span class="fs-4 text-primary-500 fw-bold me-2">Ex</span>
+                <span class="fs-2 text-primary-600 fw-bold">200</span>
+              </div>
+            </div>
+            <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
+            <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
             <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script type="module" src="../main.js"></script>
-</body>
+    <!-- level up modal -->
+    <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
+          </div>
+          <div class="modal-body text-center p-6">
+            <div class="d-flex justify-content-center me-3 p-2">
+              <div class="lvs text-start">
+                <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
+                <span class="fs-2 text-primary-600 fw-bold">12</span>
+              </div>
+            </div>
+            <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
+            <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- evolution modal -->
+    <div class="modal fade evolution-modal" id="evolutionModal" tabindex="-1" aria-labelledby="evolutionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered mx-0">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0 px-4 pb-0 pt-20">
+            <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
+              <img src="../assets/images/ICON/xmark-white.svg" alt="" />
+            </button>
+            <div class="position-relative">
+              <div class="beam-wrapper">
+                <div class="beam" style="--i: 0"></div>
+                <div class="beam" style="--i: 1"></div>
+                <div class="beam" style="--i: 2"></div>
+                <div class="beam" style="--i: 3"></div>
+                <div class="beam" style="--i: 4"></div>
+                <div class="beam" style="--i: 5"></div>
+                <div class="beam" style="--i: 6"></div>
+                <div class="beam" style="--i: 7"></div>
+                <div class="beam" style="--i: 8"></div>
+                <div class="beam" style="--i: 9"></div>
+                <div class="beam" style="--i: 10"></div>
+                <div class="beam" style="--i: 11"></div>
+                <div class="beam" style="--i: 12"></div>
+                <div class="beam" style="--i: 13"></div>
+              </div>
+              <div class="medal">
+                <img src="../assets/images/角色/兜兜 - 藍莓口味.svg" alt="dough dough" class="mw-100" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-body text-center py-12 bg-danger">
+            <p class="text-primary-300 text-center mb-2 fw-bold text-evolution">✦ 進化 ✦</p>
+            <p class="text-primary-50 text-center fw-bold mb-0 text-dough-title">藍莓兜兜</p>
+            <div class="deco-line d-flex">
+              <div class="bg-primary-200"></div>
+              <div class="bg-white"></div>
+              <div class="bg-primary-200"></div>
+            </div>
+            <div class="deco-line deco-line-right d-flex">
+              <div class="bg-primary-200"></div>
+              <div class="bg-white"></div>
+              <div class="bg-primary-200"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
+      <div class="offcanvas-body p-0"><%- include('./layout/newConsumption'); -%></div>
+    </div>
+
+    <%- include('./layout/components/keyboard'); -%> <%- include('./layout/components/photogrid'); -%>
+
+    <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-neutral-500 text-white py-3 px-4">
+            <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
+            <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
+            <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
+              <img src="../assets/images/ICON/xmark-white.svg" alt="" />
+            </button>
+          </div>
+          <div class="modal-body text-center p-3">
+            <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
+            <div class="d-grid">
+              <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
