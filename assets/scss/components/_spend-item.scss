@@ -1,11 +1,12 @@
 .spend-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ECEEF2;
   padding: 8px;
 }
 
-.spend-category-item {
+.spend-category-icon {
   width: 32px;
   height: 32px;
 }
@@ -18,9 +19,9 @@
 
 .spend-category-tag {
   font-size: 12px;
-  font-weight: 600;
-  line-height: 1;
-  padding: 8px 9.5px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 8px 8px;
   border-radius: 8px;
   background: $gray-50;
   color: $secondary;
@@ -32,10 +33,12 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.014em;
+  color: $neutral-700;
 }
 
 .spend-price {
   font-size: 14px;
   line-height: 20px;
+  font-weight: 500;
   letter-spacing: 0.014em;
 }

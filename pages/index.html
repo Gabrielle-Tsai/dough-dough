@@ -43,7 +43,7 @@
         </ul>
 
         <div class="d-flex flex-column align-items-center">
-          <button class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn">
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill p-1 pe-3 d-flex align-items-center profile-btn shadow-sm">
             <img src="../assets/images/ICON/points.svg" alt="points" class="me-tiny" />
             <span class="text-primary-800 fw-semibold lh-1">120</span>
           </button>
@@ -52,8 +52,8 @@
             <img src="../assets/images/角色/兜兜 - 原味.svg" alt="dough dough" class="w-100" style="transform: scale(1.2)" />
           </button>
 
-          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm" type="button">
-            <span class="text-primary-800 fw-semibold lh-1">兜小美</span>
+          <button class="btn btn-outline-primary-500 bg-white rounded-pill py-1 px-2 ps-3 profile-btn shadow-sm d-flex align-items-center" type="button">
+            <div class="text-primary-800 fw-semibold lh-1 d-inline-block me-tiny">兜小美</div>
             <img src="../assets/images/ICON/edit.svg" alt="edit" />
           </button>
         </div>
@@ -84,7 +84,7 @@
       </ul>
 
       <button
-        class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn"
+        class="btn btn-accent text-white py-3 px-6 rounded-pill d-flex align-items-center track-btn shadow-sm"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#consumptionOffcanvas"
@@ -122,7 +122,7 @@
               <div class="spend-category-tag">薪資</div>
               <p class="spend-note">努力用功公司</p>
             </div>
-            <div class="spend-price text-success">$48,000</div>
+            <div class="spend-price text-success">+ $48,000</div>
           </div>
         </li>
         <li class="spend-item">
@@ -142,7 +142,7 @@
               <div class="spend-category-tag">獎學金</div>
               <p class="spend-note">UI 設計實戰營</p>
             </div>
-            <div class="spend-price text-success">$2,000</div>
+            <div class="spend-price text-success">+ $2,000</div>
           </div>
         </li>
         <li class="spend-item">
@@ -183,15 +183,15 @@
     <!-- Award Modal -->
     <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content border-0">
           <div class="modal-header bg-neutral-500 text-white py-3 px-4">
             <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
-            <h1 class="modal-title fs-6" id="awardModalLabel">獲取獎勵</h1>
+            <h1 class="modal-title fs-8 fw-normal" id="awardModalLabel">獲取獎勵</h1>
           </div>
           <div class="modal-body text-center p-6">
-            <div class="d-flex justify-content-center me-3 p-2">
+            <div class="d-flex justify-content-center me-3 px-2 mb-3">
               <div class="points me-3 text-start">
-                <img src="../assets/images/ICON/points.svg" alt="points" class="me-2 pt-1" />
+                <img src="../assets/images/ICON/points.svg" alt="points" class="me-tiny pt-1" />
                 <span class="fs-2 text-primary-600 fw-bold">10</span>
               </div>
               <div class="exps text-start">
@@ -199,8 +199,8 @@
                 <span class="fs-2 text-primary-600 fw-bold">200</span>
               </div>
             </div>
-            <p class="text-secondary text-center mb-1 fw-semibold">記帳完成，兜兜又長大囉</p>
-            <p class="text-neutral-500 fs-10 mb-6">完成 3 筆記帳</p>
+            <p class="text-secondary text-center mb-1 fw-normal">記帳完成，兜兜又長大囉</p>
+            <p class="text-neutral-500 fs-10 mb-6 lh-5">完成 3 筆記帳</p>
             <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
           </div>
         </div>
@@ -213,7 +213,7 @@
         <div class="modal-content">
           <div class="modal-header bg-neutral-500 text-white py-3 px-4">
             <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
-            <h1 class="modal-title fs-6" id="levelUpModalLabel">等級提升</h1>
+            <h1 class="modal-title fs-8 fw-normal" id="levelUpModalLabel">等級提升</h1>
           </div>
           <div class="modal-body text-center p-6">
             <div class="d-flex justify-content-center me-3 p-2">
@@ -222,7 +222,7 @@
                 <span class="fs-2 text-primary-600 fw-bold">12</span>
               </div>
             </div>
-            <p class="text-secondary text-center mb-1 fw-semibold">兜小美升級了！</p>
+            <p class="text-secondary text-center mb-1 fw-medium">兜小美升級了！</p>
             <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
             <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
           </div>
@@ -284,12 +284,12 @@
 
     <%- include('./layout/components/keyboard'); -%> <%- include('./layout/components/photogrid'); -%>
 
-    <div class="modal fade" id="consumptionNodeModal" tabindex="-1" aria-labelledby="consumptionNodeModalLabel" aria-hidden="true">
+    <div class="modal fade" id="consumptionNoteModal" tabindex="-1" aria-labelledby="consumptionNoteModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content border-0">
           <div class="modal-header bg-neutral-500 text-white py-3 px-4">
             <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
-            <h1 class="modal-title fs-6 fw-semibold" id="consumptionNodeModalLabel">備註</h1>
+            <h1 class="modal-title fs-8 fw-semibold" id="consumptionNoteModalLabel">備註</h1>
             <button class="btn ms-auto p-0" type="button" data-bs-dismiss="modal" aria-label="Close">
               <img src="../assets/images/ICON/xmark-white.svg" alt="" />
             </button>
@@ -297,7 +297,7 @@
           <div class="modal-body text-center p-3">
             <textarea name="consumption-note" id="consumption-note" class="form-control mb-3 bg-neutral-100 border-0 note-textarea p-3"></textarea>
             <div class="d-grid">
-              <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+              <button class="btn btn-accent text-white rounded-pill py-4 px-12 lh-1 border-0" data-bs-dismiss="modal" aria-label="Close">確定</button>
             </div>
           </div>
         </div>
