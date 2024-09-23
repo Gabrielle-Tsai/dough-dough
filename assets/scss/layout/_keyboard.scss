@@ -1,0 +1,16 @@
+
+.iconimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #64748B;
+    mix-blend-mode: luminosity;
+
+
+}
+.iconimgsize{
+    img {
+        height: 24px;
+        width: 24px;
+    }
+}

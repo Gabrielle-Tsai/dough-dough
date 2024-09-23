@@ -1,39 +1,39 @@
-<div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasNumPad" aria-labelledby="offcanvasBottomLabel">
-  <div class="rounded-top">
+<div class="offcanvas offcanvas-bottom h-auto rounded-top rounded-m shadow-sheet" tabindex="-1" id="offcanvasNumPad" aria-labelledby="offcanvasBottomLabel">
+  <div class="rounded-top rounded-m">
     <!-- 切換日期 -->
     <div class="d-flex justify-content-between align-item-center py-3 px-4">
       <div class="d-flex align-items-center">
-        <span class="material-symbols-outlined text-neutral-700"> arrow_back_ios </span>
+        <span class="material-symbols-outlined fs-7 text-neutral-700"> arrow_back_ios </span>
       </div>
-      <div class="fs-7 fw-semibold">31 Jul 2024</div>
+      <div class="fs-7 fw-semibold text-neutral-950">31 Jul 2024</div>
       <div class="d-flex align-items-center">
-        <span class="material-symbols-outlined text-neutral-700"> arrow_forward_ios </span>
+        <span class="material-symbols-outlined fs-7 text-neutral-700"> arrow_forward_ios </span>
       </div>
     </div>
 
     <!-- 輸入金額、照片、填寫備註 -->
-    <div class="d-flex align-item-center py-3 px-4 bg-neutral-100">
+    <div class="d-flex align-item-center py-2 px-4 bg-neutral-100">
       <div style="width: 40%">
         <span class="fs-6 text-danger fw-bold">$0</span>
       </div>
       <div class="bg-neutral-300" style="width: 1px"></div>
       <div class="d-flex gap-2 ms-2 justify-content-between align-item-center flex-grow-1">
-        <button type="button" class="border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPhotoPad" aria-controls="offcanvasBottom">
-          <span class="material-symbols-outlined fs-2"> photo_camera </span>
+        <button type="button" class="border-0 d-flex justify-content-center align-item-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPhotoPad" aria-controls="offcanvasBottom">
+          <span class="material-symbols-outlined fs-3"> photo_camera </span>
         </button>
-        <button class="w-100 border-0 bg-transparent text-start text-neutral-300 fs-10" type="button" data-bs-toggle="modal" data-bs-target="#consumptionNoteModal">填寫備註</button>
+        <button class="w-100 border-0 p-0 bg-transparent text-start text-neutral-300 fs-10" type="button" data-bs-toggle="modal" data-bs-target="#consumptionNoteModal">填寫備註</button>
       </div>
     </div>
 
     <!-- 快速標記 -->
-    <div class="py-3 bg-neutral-100">
+    <div class="py-2 bg-neutral-100 border-top border-top-neutral-100">
       <div class="swiper mySwiper">
         <ul class="swiper-wrapper list-unstyled m-0 p-0 d-flex align-items-center">
-          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny ms-4 px-2 text-nowrap">老爺溫泉酒店</li>
-          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">宜蘭礁溪飯店</li>
-          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">溫泉湯屋</li>
-          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">青旅</li>
-          <li class="swiper-slide w-auto rounded-pill bg-white fs-6 fw-semibold text-neutral-500 py-tiny px-2 text-nowrap">盥洗用具</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-10 fw-medium text-neutral-500 py-tiny ms-4 px-2 text-nowrap">老爺溫泉酒店</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-10 fw-medium text-neutral-500 py-tiny px-2 text-nowrap">宜蘭礁溪飯店</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-10 fw-medium text-neutral-500 py-tiny px-2 text-nowrap">溫泉湯屋</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-10 fw-medium text-neutral-500 py-tiny px-2 text-nowrap">青旅</li>
+          <li class="swiper-slide w-auto rounded-pill bg-white fs-10 fw-medium text-neutral-500 py-tiny px-2 text-nowrap">盥洗用具</li>
         </ul>
       </div>
     </div>
@@ -54,8 +54,9 @@
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">8</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">9</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">÷</button>
-        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs" style="height: 40px; line-height: 40px">
-          <span class="material-symbols-outlined text-neutral-500" style="line-height: 40px"> account_balance </span>
+        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs iconimg iconimgsize" style="height: 40px; line-height: 40px">
+          <!-- <span class="material-symbols-outlined fs-7 text-neutral-500" style="line-height: 40px"> account_balance </span> -->
+          <img src="../assets/images/ICON/bank-building-active.svg" alt="" />
         </button>
       </div>
       <div class="row px-3 mb-2">
@@ -63,8 +64,9 @@
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">5</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">6</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">x</button>
-        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs" style="height: 40px; line-height: 40px">
-          <span class="material-symbols-outlined text-neutral-500" style="line-height: 40px"> qr_code_scanner </span>
+        <button class="col d-flex justify-content-center align-item-center border-0 bg-white rounded-xxs iconimg iconimgsize" style="height: 40px; line-height: 40px">
+          <!-- <span class="material-symbols-outlined fs-7 text-neutral-500" style="line-height: 40px"> qr_code_scanner </span> -->
+          <img src="../assets/images/ICON/QRcode.svg" alt="" />
         </button>
       </div>
       <div class="row px-3 mb-2">
@@ -72,7 +74,7 @@
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">2</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">3</button>
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">-</button>
-        <button class="col d-flex justify-content-center align-item-center border-0 text-neutral-500 fs-7 fw-semibold bg-white rounded-xxs" style="height: 40px; line-height: 40px">再記</button>
+        <button class="col d-flex justify-content-center align-item-center border-0 text-accent-600 fs-9 fw-semibold bg-white rounded-xxs" style="height: 40px; line-height: 40px">再記</button>
       </div>
       <div class="row px-3">
         <button class="col d-flex justify-content-center align-item-center border-0 me-2 bg-white rounded-xxs" style="height: 40px; line-height: 40px">.</button>
