@@ -5,9 +5,8 @@
 .dough-profile::after {
   content: '';
   position: absolute;
-  opacity: 0.64;
   background:  linear-gradient(to bottom, rgba(255,255,255, 1) 0%, rgba(255, 255, 255, 0) 100%),
-  url('/assets/images/背景圖/廚房.svg');
+  url('/assets/images/背景圖/0924bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
