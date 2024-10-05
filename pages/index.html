@@ -210,13 +210,13 @@
     <!-- level up modal -->
     <div class="modal fade" id="levelUpModal" tabindex="-1" aria-labelledby="levelUpModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content border-0">
           <div class="modal-header bg-neutral-500 text-white py-3 px-4">
             <img src="../assets/images/ICON/toast-white.svg" alt="toast" class="award-title-icon me-2" />
             <h1 class="modal-title fs-8 fw-normal" id="levelUpModalLabel">等級提升</h1>
           </div>
           <div class="modal-body text-center p-6">
-            <div class="d-flex justify-content-center me-3 p-2">
+            <div class="d-flex justify-content-center me-3 px-2 mb-3">
               <div class="lvs text-start">
                 <span class="fs-4 text-primary-500 fw-bold me-2">Lv</span>
                 <span class="fs-2 text-primary-600 fw-bold">12</span>
@@ -224,7 +224,7 @@
             </div>
             <p class="text-secondary text-center mb-1 fw-medium">兜小美升級了！</p>
             <p class="text-neutral-500 fs-10 mb-6">原味兜兜</p>
-            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            <button class="btn btn-accent text-white rounded-pill py-3 px-12 lh-1 border-0" data-bs-dismiss="modal" aria-label="Close">OK</button>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
       <div class="modal-dialog modal-dialog-centered mx-0">
         <div class="modal-content bg-transparent border-0">
           <div class="modal-header border-0 px-4 pb-0 pt-20">
-            <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close" type="button" data-bs-dismiss="modal">
+            <button class="btn rounded-circle bg-primary-600 p-3 lh-1 position-absolute evolution-close border-0" type="button" data-bs-dismiss="modal">
               <img src="../assets/images/ICON/xmark-white.svg" alt="" />
             </button>
             <div class="position-relative">
@@ -279,7 +279,7 @@
     </div>
 
     <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="consumptionOffcanvas" aria-labelledby="consumptionOffcanvasLabel">
-      <div class="offcanvas-body p-0"><%- include('./layout/newConsumption'); -%></div>
+      <div class="offcanvas-body bg-neutral-50 p-0"><%- include('./layout/newConsumption'); -%></div>
     </div>
 
     <%- include('./layout/components/keyboard'); -%> <%- include('./layout/components/photogrid'); -%>
